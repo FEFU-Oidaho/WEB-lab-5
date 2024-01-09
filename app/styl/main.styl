@@ -4,10 +4,6 @@ back(size)
 	padding: size + "%"
 	margin 0 0 1% 0
 
-images
-	display grid
-	grid-template-columns repeat(5, 1fr)
-
 colorText = #6f6d6d
 
 html
@@ -26,7 +22,16 @@ nav
 		&.active
 			background-color #f87777
 			color #f8f8f8
-			
+
+div.images   
+	display grid   
+	grid-template-columns repeat(5, 1fr)   
+	grid-gap 0.5%   
+	back(1)    
+	   
+	& img     
+		width: 100% 
+		
 article   
 	width 80%   
 	margin auto   
