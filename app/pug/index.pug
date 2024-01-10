@@ -1,20 +1,57 @@
 <!DOCTYPE html>
+-var MainText = "Военная техника — технические средства, имеющиеся у вооружённых сил и обеспечивающие их боевые действия и повседневное функционирование. В частности боевая техника, предназначенная для нанесения урона по противнику во время боя. Данный ресурс предоставляет информации об основных типах военной (боевой) техники, стоящей на вооружении в ВС РФ."
+-var TankText = "Танк — бронированная боевая машина на гусеничном ходу, с пушечным и дополнительным пулемётным вооружением, установленным во вращающейся башне, предназначенным для стрельбы прямой наводкой."
+-var BMPText = "БМП — класс бронированных боевых машин, основным назначением которых является огневая поддержка и транспортировка личного состава отделения пехоты к месту выполнения боевой задачи."
+-var ArtText = "Артиллерийское орудие — разновидность огнестрельного и иного ствольного оружия калибром более 20 мм. Как правило, этот тип оружия непригоден для транспортирования силами одного человека на поле боя."
+-
+	var MenuElements = [
+		{"title": "Главная", "url": "#", "class": "item-menu-main"},
+		{"title": "Танки", "url": "#", "class": "item-menu-tank"},
+		{"title": "БМП", "url": "#", "class": "item-menu-bmp"},
+		{"title": "Артиллерия", "url": "#", "class": "item-menu-art"},
+		{"title": "Характеристики", "url": "#", "class": "item-menu-tth"},
+	]
+
+-
+	var ContentElements = [
+		{"class": "item-first", "subclass": "vtopic-container", "title": "Военная техника", "text": MainText, "img": "img/tank.png"},
+		{"class": "item-second", "subclass": "htopic-container", "title": "Танк", "text": TankText, "img": "img/tank.png"},
+		{"class": "item-third", "subclass": "htopic-container", "title": "БМП", "text": BMPText, "img": "img/bmp.png"},
+		{"class": "item-fourth", "subclass": "htopic-container", "title": "Артиллерия", "text": ArtText, "img": "img/art.png"},
+	]
+
+
 html
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-		title
+		title Танкопедия
 		link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
 		link(rel="stylesheet", href="css/main.css")
 	body
+		header 
+			.header-container
+				h1= "Военная Техника"
+			.header-menu 
+				ul 
+					each element in MenuElements
+						li(class=element.class)
+							a(href=element.url)= element.title
 
-		//- Introduce
-		p Successfully!
-		p Now you have Browser Sync, Pug, Stylus, Autoprefixer, jQuery, Bootstrap Reboot
-		p Folder src/ for PSD templates, JPG previews etc.
-		p Folder app/ for Pug and Stylus files. app/pug/index.pug will transpiled to dist/index.html. app/styl/main.styl will transpiled to dist/css/main.css
-		p Folder dist/ - distributive folder - here transpiled index.html and css/main.css, and you can add here other CSS, JS, IMG, FONTS files
-		p Have a nice coding :)
+
+		article
+			div.content-container 
+				each element in ContentElements
+					div(class=(element.class + " " + element.subclass))
+						img.item-image(src=element.img)
+						.item-header
+							h3= element.title
+						.item-text= element.text
+					
+	footer 
+		.footer-container 
+			p= "© Башинский Р.А., Б9121-09.03.04(4), 2023-2024"
+			p= "✉ Контакты"
 
 		//- Scripts
 		script(src="js/jquery-3.5.1.min.js")

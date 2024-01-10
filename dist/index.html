@@ -3,18 +3,60 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title></title>
+    <title>Танкопедия</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
-    <p>Successfully!</p>
-    <p>Now you have Browser Sync, Pug, Stylus, Autoprefixer, jQuery, Bootstrap Reboot</p>
-    <p>Folder src/ for PSD templates, JPG previews etc.</p>
-    <p>Folder app/ for Pug and Stylus files. app/pug/index.pug will transpiled to dist/index.html. app/styl/main.styl will transpiled to dist/css/main.css</p>
-    <p>Folder dist/ - distributive folder - here transpiled index.html and css/main.css, and you can add here other CSS, JS, IMG, FONTS files</p>
-    <p>Have a nice coding :)</p>
+    <header> 
+      <div class="header-container">
+        <h1>Военная Техника</h1>
+      </div>
+      <div class="header-menu"> 
+        <ul> 
+          <li class="item-menu-main"><a href="#">Главная</a></li>
+          <li class="item-menu-tank"><a href="#">Танки</a></li>
+          <li class="item-menu-bmp"><a href="#">БМП</a></li>
+          <li class="item-menu-art"><a href="#">Артиллерия</a></li>
+          <li class="item-menu-tth"><a href="#">Характеристики</a></li>
+        </ul>
+      </div>
+    </header>
+    <article>
+      <div class="content-container"> 
+        <div class="item-first vtopic-container"><img class="item-image" src="img/tank.png"/>
+          <div class="item-header">
+            <h3>Военная техника</h3>
+          </div>
+          <div class="item-text">Военная техника — технические средства, имеющиеся у вооружённых сил и обеспечивающие их боевые действия и повседневное функционирование. В частности боевая техника, предназначенная для нанесения урона по противнику во время боя. Данный ресурс предоставляет информации об основных типах военной (боевой) техники, стоящей на вооружении в ВС РФ.</div>
+        </div>
+        <div class="item-second htopic-container"><img class="item-image" src="img/tank.png"/>
+          <div class="item-header">
+            <h3>Танк</h3>
+          </div>
+          <div class="item-text">Танк — бронированная боевая машина на гусеничном ходу, с пушечным и дополнительным пулемётным вооружением, установленным во вращающейся башне, предназначенным для стрельбы прямой наводкой.</div>
+        </div>
+        <div class="item-third htopic-container"><img class="item-image" src="img/bmp.png"/>
+          <div class="item-header">
+            <h3>БМП</h3>
+          </div>
+          <div class="item-text">БМП — класс бронированных боевых машин, основным назначением которых является огневая поддержка и транспортировка личного состава отделения пехоты к месту выполнения боевой задачи.</div>
+        </div>
+        <div class="item-fourth htopic-container"><img class="item-image" src="img/art.png"/>
+          <div class="item-header">
+            <h3>Артиллерия</h3>
+          </div>
+          <div class="item-text">Артиллерийское орудие — разновидность огнестрельного и иного ствольного оружия калибром более 20 мм. Как правило, этот тип оружия непригоден для транспортирования силами одного человека на поле боя.</div>
+        </div>
+      </div>
+    </article>
+  </body>
+  <footer> 
+    <div class="footer-container"> 
+      <p>© Башинский Р.А., Б9121-09.03.04(4), 2023-2024</p>
+      <p>✉ Контакты</p>
+    </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
-  </body>
+  </footer>
 </html>
