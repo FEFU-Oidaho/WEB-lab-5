@@ -21,6 +21,19 @@
 	]
 
 
+mixin create_menu(elements)
+		each element in elements
+			li(class=element.class)
+				a(href=element.url)= element.title
+
+mixin create_content(elements)
+	each element in elements
+		div(class=(element.class + " " + element.subclass))
+			img.item-image(src=element.img)
+			.item-header
+				h3= element.title
+			.item-text= element.text
+
 html
 	head
 		meta(charset="UTF-8")
@@ -32,21 +45,16 @@ html
 		header 
 			.header-container
 				h1= "Военная Техника"
+			
 			.header-menu 
 				ul 
-					each element in MenuElements
-						li(class=element.class)
-							a(href=element.url)= element.title
+					+create_menu(MenuElements)
+				
 
 
 		article
-			div.content-container 
-				each element in ContentElements
-					div(class=(element.class + " " + element.subclass))
-						img.item-image(src=element.img)
-						.item-header
-							h3= element.title
-						.item-text= element.text
+			.content-container
+				+create_content(ContentElements)
 					
 	footer 
 		.footer-container 
